@@ -10,11 +10,17 @@ radial-gradient(red, blue, yellow, green, pink, turquoise, gold, grey, white),*/
 body{
     width: 400px;
     height: 300px;
-    background: url("blr.png");
-    background-position: right bottom, left top;
+    background: url("blr.png") no-repeat fixed left top, right bottom;
+    /*background-position: left top, right bottom;
     background-repeat: no-repeat;
-    
+    background-attachment: fixed; the background shorthand is color, image, repeat, attachment, position. shorthand for border is width(5px), style(solid), color(red)*.for border-color: teal tomato turquoise violet;*/
+    margin-left: 200px;
+    color: rgb(253, 9, 9);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/*This is an example of a fallback system, if the browser doesn't support the first font, it tries the next font and so on.*/
+    text-indent: 20px;/*This gives the text a paragraphy look, it indents the first line.*/
+    background-size: cover;/*This specifies the size of the background image, to fill the whole page or to have a reduced size.*/
     /*opacity: 0.5;*/
+    /*font-variant: small-caps; I like this small caps.*/
 }
 nav{
     padding: 50px 0;
@@ -23,6 +29,8 @@ nav{
 nav ul{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%, rgba(255, 255, 255, 0.2)25%, rgba(255, 255, 255, 0.2)75%,rgba(255, 255, 255, 0)100%);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    border-left: 6px solid turquoise;
+    border-right:6px solid yellow;
 }
 nav ul li{
     display: inline-block;
@@ -43,11 +51,12 @@ nav ul li a{
 
 }*/
 #parent p:first-child{
-    color:yellow;
-    text-decoration: underline;
+    color:gold;
+    text-decoration: overline;
+    
 }
 p::first-letter{
-    color: #589432;
+    color: yellow;
     
 }
 /*p::before{
@@ -65,12 +74,15 @@ p::selection{
     word-wrap: break-word;
 }*/
 div{
-    float: left;
+    float: middle;
     width: 300px;
     height: 100px;
     margin: 4px;
     color: #FFF;
     background: -webkit-linear-gradient(DeepSkyBlue, Black);
+}
+#parent{
+    
 }
 .dropshadow{
     filter: drop-shadow(5px 9px 2px blue);
