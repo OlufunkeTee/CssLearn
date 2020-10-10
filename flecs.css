@@ -1,0 +1,85 @@
+.begin{
+    background: yellow;
+    padding: 5px;
+}
+#top{
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+/*body styling*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+/*Header and Logo Title*/
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+/*Navigation bar styling*/
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+/*Navigation bar links style*/
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+/*hover colour change*/
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/*column container*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*creates 2 unequal columns that sits next to each other. Sidebar or left column*/
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/*Main column*/
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example*/
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+}
+
+.fakeimgg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    height: 60px;
+}
+
+/*Footer*/
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+/*Responsive layout, when the screen is less than 700px wide, makes the 2 columns stack on top of each other instead of next to each other*/
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}

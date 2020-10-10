@@ -1,10 +1,50 @@
-h1 {
-    background-color: green;
-    opacity: 0.6;
+* {
+    box-sizing: border-box;
 }
-div {
-    background-color: lightblue;
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-p {
-    background-color: yellow;
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+/*Creates four equal columns that sits next to each other*/
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+/*.flex-container {
+    display: flex;
+    background-color: dodgerblue;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}*/
+/*Flex-wrap specifies whether the flex items wrap or not and how they wrap. The flex-flow is a shorthand property for setting both the flex-direction and flex-wrap.*/
+@media (max-width: 800px) {
+    .column{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
